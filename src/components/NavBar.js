@@ -6,7 +6,7 @@ export default function NavBar() {
     <header>
       <div>
         <nav>
-            <NavLink to="/">
+            <NavLink to="/" exact>
                 Randy
             </NavLink>
             <NavLink to="/post">
