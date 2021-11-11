@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -10,11 +10,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route component= {Home} path="/" exact />
-        <Route component= {About} path="/About" />
-        <Route component= {SinglePost} path="/post/:slug" />
-        <Route component= {Post} path="/post" />
-        <Route component= {Project} path="/project" />
+        <Route component={Home} path ="/" exact />
+        <Route component={About} path ="/about"/>
+        <Route component={SinglePost} path= "/post/:slug"/>
+        <Route component={Post} path = "/post"/>
+        <Route component={Project} path = "/project"/>
       </Routes>
     </BrowserRouter>
   );
