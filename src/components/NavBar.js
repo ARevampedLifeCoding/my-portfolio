@@ -37,7 +37,7 @@ export default function NavBar() {
             About Me!
           </NavLink>
         </nav>
-        <div>
+        <div className="inline-flex py-3 px-3 my-6">
           <SocialIcon
             url="https://www.linkedin.com/in/randylangston/"
             className="mr-4"
