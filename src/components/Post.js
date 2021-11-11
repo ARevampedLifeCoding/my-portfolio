@@ -4,7 +4,19 @@ import sanityClient from "../client";
 export default function Post() {
   const [postData, setPost] = useState(null);
   useEffect(() => {
-    sanityClient.fetch(``);
-  });
+    sanityClient.fetch(`*[_type == "post]{
+        title,
+        slug,
+        mainImage{
+            asset->{
+                _id,
+                url
+            },
+            alt
+        }
+    }`)
+    .then((data) => setPost(data))
+    .catch(console.error);
+  }, []);
   return;
 }
