@@ -10,7 +10,7 @@ import NavBar from "./components/NavBar"
 function App() {
   return (
     <BrowserRouter>
-    <NavBar />
+    <NavBar/>
       <Routes>
         <Route component={Home} path ="/" exact />
         <Route component={About} path ="/about"/>
@@ -21,5 +21,6 @@ function App() {
     </BrowserRouter>
   );
 }
+
 
 export default App;
