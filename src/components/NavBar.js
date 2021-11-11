@@ -14,9 +14,9 @@ export default function NavBar() {
           >
             Randy
           </NavLink>
-          <NavLink to="/post">Blog Post</NavLink>
-          <NavLink to="/project">Project</NavLink>
-          <NavLink to="/about">About Me!</NavLink>
+          <NavLink to="/post" className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800 ">Blog Post</NavLink>
+          <NavLink to="/project"className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800 ">Project</NavLink>
+          <NavLink to="/about" className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800 ">About Me!</NavLink>
         </nav>
       </div>
     </header>
