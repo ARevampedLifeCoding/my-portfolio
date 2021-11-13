@@ -40,12 +40,31 @@ export default function Project() {
                 {project.title}
               </a>
             </h3>
-            <div>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p></p>
-              <span></span>
+            <div className="text-gray-500 text-xs space-x-4">
+              <span>
+                <strong className="font-bold">Finished on</strong>:{""}
+                {new Date(project.date).toLocaleDateString()}
+              </span>
+              <span>
+                <strong className="font-bold">Company</strong>:{""}
+                {project.place}
+              </span>
+              <span>
+                <strong className="font-bold">Type</strong>:{""}
+                {project.projectType}
+              </span>
+              <p className="my-6 text-lg text-grey-700 leading-relaxed">
+                {project.description}
+              </p>
+              <a
+                href={project.length}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-red-500 font-bold hover:underline hover:text-red-400"
+              >
+                  View the project{""} 
+                <span role="img" aria-lable="right pointer"> 👉</span>
+              </a>
             </div>
           </article>
         </section>
