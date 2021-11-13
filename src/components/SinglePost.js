@@ -44,14 +44,27 @@ export default function SinglePost() {
                 {singlePost.title}
               </h1>
               <div className="flex justify-center text-gray-800">
-                <img src={urlFor(singlePost.authorImage).url()}/>
-                <p></p>
+                <img
+                  src={urlFor(singlePost.authorImage).url()}
+                  alt={singlePost.name}
+                  className="w-10 h-10 rounded-full"
+                />
+
+                <p className="cursive flex items-center pl-2 text-2xl">
+                  {" "}
+                  {singlePost.name}
+                </p>
               </div>
             </div>
           </div>
-          <img />
+          <img
+            src={singlePost.mainImage.asset.url}
+            alt={singlePost.title}
+            className="w-full object-cover rounded-t"
+            style={{ height:"400px"}}
+          />
         </header>
-        <div>BLOCK COntent</div>
+        <div className="px-16 lg:px-48 py-12 lg:py-20 prose">BLOCK COntent</div>
       </article>
     </main>
   );
