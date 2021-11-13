@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line
 import ReactDOM from 'react-dom';
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from 'react-social-icons';

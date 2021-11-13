@@ -1,28 +1,29 @@
-import React from "react";
-import { BrowserRouter, Router, Route } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import SinglePost from "./components/SinglePost";
-import Post from "./components/Post";
-import Project from "./components/Project";
-import NavBar from "./components/NavBar"
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-   <BrowserRouter>
-    <NavBar/>
-    <Router>
-        <Route element={Home} path ="/" exact />
-        <Route element={About} path ="/about"/>
-        <Route element={SinglePost} path= "/post/:slug"/>
-        <Route element={Post} path = "/post"/>
-        <Route element={Project} path = "/project"/>
-     
-    </Router>
-    </BrowserRouter>
-  );
-}
+const Home = lazy(() => import('./components/Home'));
+const About = lazy(() => import('./components/About'));
+const SinglePost = lazy(() => import('./components/SinglePost'));
+const Post = lazy(() => import('./components/Post'));
+const Project = lazy(() => import('./components/Project'));
+const NavBar = lazy(() => import('./components/NavBar'));
 
+const App = () => (
+  
+  <Router>
+    
+    <Suspense fallback={<div>Loading...</div>}>
+    <NavBar />
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+        <Route path="/post:slug" component={SinglePost}/>
+        <Route path="/post" component={Post}/>
+        <Route path="/project" component={Project}/>
+      </Switch>
+    </Suspense>
+  </Router>
+);
 
 export default App;
 
