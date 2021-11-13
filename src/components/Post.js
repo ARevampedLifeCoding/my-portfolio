@@ -27,7 +27,7 @@ export default function Post() {
       <section className="container mx-auto">
         <h1 className="text-5xl flex justify-center cursive">Blog Post Page</h1>
         <h2 className="text-lg text-gray-600 flex justify -center mb-12">
-          Welcome to my page of blog post
+          
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {postData && postData.map((post, index)=>(
@@ -42,7 +42,7 @@ export default function Post() {
                     alt={post.mainImage.alt}
                     className="w-full h-full rounded-r object-cover absolute"
                   />
-                  <span className="block realitive h-full flex justify-end items-end pr-4 pb-4 ">
+                  <span className="block relative h-full flex justify-end items-end pr-4 pb-4 ">
                     <h3 className="text-gray-800 text-lg font-blog px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded">
                       {post.title}
                     </h3>
