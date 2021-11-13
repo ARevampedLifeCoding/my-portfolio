@@ -29,6 +29,7 @@ export default function Project() {
           Welcome to my projects page!
         </h2>
         <section className="grid grid-cols-2 gap-8">
+            {projectData && projectData.map((project, index) => (
           <article className="relative rounded-lg shadow-xl bd-white p-16">
             <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
               <a
@@ -67,6 +68,7 @@ export default function Project() {
               </a>
             </div>
           </article>
+          ))}
         </section>
       </section>
     </main>
