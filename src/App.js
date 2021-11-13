@@ -1,6 +1,5 @@
 import React from "react";
-// import { BrowserRouter, Switch ,Route } from 'react-router-dom';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Router, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import SinglePost from "./components/SinglePost";
@@ -10,8 +9,9 @@ import NavBar from "./components/NavBar"
 
 function App() {
   return (
-    <Router>
+   <BrowserRouter>
     <NavBar/>
+    <Router>
         <Route element={Home} path ="/" exact />
         <Route element={About} path ="/about"/>
         <Route element={SinglePost} path= "/post/:slug"/>
@@ -19,6 +19,7 @@ function App() {
         <Route element={Project} path = "/project"/>
      
     </Router>
+    </BrowserRouter>
   );
 }
 
