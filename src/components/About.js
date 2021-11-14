@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client";
 import img from "../img/portfolio-background.jpeg";
-import imageUrlBuilder from "./@sanity/image-url";
-import BlockContent from "../../studio/schemas/blockContent";
+import imageUrlBuilder from "@sanity/image-url";
+import BlockContent from "@sanity/block-content-to-react";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
