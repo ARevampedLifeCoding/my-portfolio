@@ -1,6 +1,6 @@
 export default {
   name: "project",
-  title: "project",
+  title: "Project",
   type: "document",
   fields: [
     {
@@ -27,7 +27,7 @@ export default {
         list: [
           { value: "personal", title: "Personal" },
           { value: "client", title: "Client" },
-          { value: "school;", title: "School" },
+          { value: "school", title: "School" },
         ],
       },
     },
