@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import sanityClient from "../client";
+import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 
@@ -16,27 +16,29 @@ export default function SinglePost() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[slug.current == "${slug}]{
-          title,
-          _id,
-          slug,
-          mainImage{
-             asset -> {
-                 _id
-                 url
-             } ,
-             body,
-             "name": author->name,
-            "authorImage" :author->image        }
-      }`
+        `*[slug.current == "${slug}"]{
+            title,
+            _id,
+            slug,
+            mainImage{
+                asset->{
+                    _id,
+                    url
+                }
+            },
+            body,
+            "name": author->name,
+            "authorImage": author->image
+        }`
       )
       .then((data) => setSinglePost(data[0]))
       .catch(console.error);
   }, [slug]);
 
   if (!singlePost) return <div>Loading...</div>;
+
   return (
-    <main className="bg-gray-2-- min-h-screen p-12">
+    <main className="bg-gray-200 min-h-screen p-12">
       <article className="container shadow-lg mx-auto bg-green-100 rounded-lg">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
@@ -50,9 +52,7 @@ export default function SinglePost() {
                   alt={singlePost.name}
                   className="w-10 h-10 rounded-full"
                 />
-
                 <p className="cursive flex items-center pl-2 text-2xl">
-                  {" "}
                   {singlePost.name}
                 </p>
               </div>
