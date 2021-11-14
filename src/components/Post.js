@@ -7,7 +7,7 @@ export default function Post() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post]{
+        `*[_type == "post"]{
         title,
         slug,
         mainImage{

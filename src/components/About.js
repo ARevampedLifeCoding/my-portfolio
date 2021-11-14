@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState, useEffect } from "react";
 import sanityClient from "../client";
 import img from "../img/portfolio-background.jpeg";
 import imageUrlBuilder from "@sanity/image-url";
@@ -15,7 +15,7 @@ export default function About() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "author]{
+        `*[_type == "author"]{
             name,
             bio,
             "authorImage": image.asset->url
