@@ -25,7 +25,6 @@ export default function Project() {
     <main className="bg-green-100 min-h-screen p-12">
       <section className="container mx-auto">
         <h1 className="text-5xl flex justify-content cursive">My Projects</h1>
-        <h2 className="text-lg text-gray-600 flex justify-content mb-12"></h2>
         <section className="grid grid-cols-2 gap-8">
           {projectData &&
             projectData.map((project, index) => (
@@ -63,7 +62,7 @@ export default function Project() {
                     className="text-red-500 font-bold hover:underline hover:text-red-400 text-xl"
                   >
                     View the project{" "}
-                    <span role="img" aria-lable="left pointer">
+                    <span role="img" aria-label="left pointer">
                       {" "}
                       👈
                     </span>
