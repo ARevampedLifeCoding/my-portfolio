@@ -1,22 +1,22 @@
 import React from "react"
 
 
-export default function Home(){
+export default function Contact(){
     return (
         
             
-            <div class="container p3 border">
+            <div class="container">
       <h2>How to reach me</h2>
-      <a href="tel:3522756254">Cell</a>
+      <a href="tel:3522756254">Cell: 352-275-6254</a>
       <br />
-      <a href="mailto: arevampedlifecoding@gmail.com">Email</a>
+      <a href="mailto: arevampedlifecoding@gmail.com">Email: arevampedlifecoding@gmail.com</a>
       <br />
-      <a href="https://www.linkedin.com/in/randylangston/" target="_blank">
-        LinkedIn
+      <a href="https://www.linkedin.com/in/randylangston/" target="_blank" rel="noreferrer">
+        LinkedIn: https://www.linkedin.com/in/randylangston
       </a>
       <br />
-      <a href="https://github.com/ARevampedLifeCoding" target="_blank">
-        GitHub
+      <a href="https://github.com/ARevampedLifeCoding" target="_blank" rel="noreferrer">
+        GitHub: https://github.com/ARevampedLifeCoding
       </a>
     </div>
         

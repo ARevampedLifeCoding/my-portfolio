@@ -109,11 +109,11 @@ export default function Resume() {
       <br />
       <a href="mailto: arevampedlifecoding@gmail.com">Email</a>
       <br />
-      <a href="https://www.linkedin.com/in/randylangston/" target="_blank">
+      <a href="https://www.linkedin.com/in/randylangston/" target="_blank" rel="noreferrer">
         LinkedIn
       </a>
       <br />
-      <a href="https://github.com/ARevampedLifeCoding" target="_blank">
+      <a href="https://github.com/ARevampedLifeCoding" target="_blank" rel="noreferrer">
         GitHub
       </a>
     </div>
