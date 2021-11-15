@@ -12,7 +12,7 @@ export default function NavBar() {
             to="/"
             exact
             activeClassName="text-white"
-            className="inflex-flex items-center py-6 px-3 mr-4 text-red-100 hover:text-green-800 text-4xl cursive tracking widest"
+            className="inline-flex items-center py-6 px-3 mr-4 text-red-100 hover:text-green-800 text-4xl cursive tracking widest"
           >
             Randy
           </NavLink>
@@ -36,6 +36,14 @@ export default function NavBar() {
             activeClassName="text-red-100 bg-green-700"
           >
             About Me
+          </NavLink>
+          <NavLink
+            to="/resume"
+            exact
+            activeClassName="text-white"
+            className="inline-flex items-center py-6 px-3 mr-4 text-red-100 hover:text-green-800 text-4xl cursive tracking widest"
+          >
+            Resume
           </NavLink>
         </nav>
         <div className="inline-flex py-3 px-3 my-6">
