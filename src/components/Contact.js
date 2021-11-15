@@ -18,8 +18,10 @@ export default function Contact(){
       <a href="https://github.com/ARevampedLifeCoding" target="_blank" rel="noreferrer">
         GitHub: https://github.com/ARevampedLifeCoding
       </a>
+      
     </div>
         
     )
     
 }
+
