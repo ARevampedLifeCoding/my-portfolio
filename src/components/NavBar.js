@@ -38,6 +38,13 @@ export default function NavBar() {
             About Me
           </NavLink>
           <NavLink
+            to="/contact"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-teal-200 hover:text-green-800 "
+            activeClassName="text-red-100 bg-green-700"
+          >
+            Contact Me
+          </NavLink>
+          <NavLink
             to="/resume"
             exact
             activeClassName="text-white"
@@ -45,6 +52,7 @@ export default function NavBar() {
           >
             Resume
           </NavLink>
+          
         </nav>
         <div className="inline-flex py-3 px-3 my-6">
           <SocialIcon

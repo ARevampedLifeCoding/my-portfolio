@@ -7,6 +7,7 @@ const SinglePost = lazy(() => import('./components/SinglePost'));
 const Post = lazy(() => import('./components/Post'));
 const Project = lazy(() => import('./components/Project'));
 const Resume = lazy(() => import('./components/Resume'));
+const Contact = lazy(() => import('./components/Contact'));
 const NavBar = lazy(() => import('./components/NavBar'));
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
         <Route path="/post" component={Post}/>
         <Route path="/project" component={Project}/>
         <Route path="/resume" component={Resume}/>
+        <Route path="/contact" component={Contact}/>
       </Switch>
     </Suspense>
   </Router>
